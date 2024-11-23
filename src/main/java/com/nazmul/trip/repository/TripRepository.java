@@ -1,6 +1,6 @@
 package com.nazmul.trip.repository;
 
-import com.nazmul.trip.model.Trip;
+import com.nazmul.trip.entity.Trip;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
