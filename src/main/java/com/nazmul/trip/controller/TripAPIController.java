@@ -21,9 +21,9 @@ public class TripAPIController {
     private TripService tripService;
 
     @GetMapping("/trip")
-    public ResponseEntity<Trip> getTrip(long id) throws Exception{
+    public ResponseEntity<TripData> getTrip(long tripId) throws Exception{
         logger.info("TripAPIController.getTrip START");
-        Trip trip = tripService.getTrip(id);
+        TripData trip = tripService.getTrip(tripId);
         logger.info("TripAPIController.getTrip END");
         return new ResponseEntity<>(trip, HttpStatus.OK);
     }

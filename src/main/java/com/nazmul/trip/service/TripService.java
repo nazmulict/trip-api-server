@@ -70,8 +70,9 @@ public class TripService {
         return tripDataList;
     }
 
-    public Trip getTrip(long tripId){
-        return tripRepository.findTripById(tripId);
+    public TripData getTrip(long tripId){
+        Trip tripObj = tripRepository.findTripById(tripId);
+        return getBuildTripData(tripObj);
     }
 
     public TripData updateTripStatus(TripData tripData) throws Exception{
